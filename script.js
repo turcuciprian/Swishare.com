@@ -9,8 +9,11 @@ jQuery(document).ready(function() {
     var starCountRef = firebase.database().ref(xKey+'/');
     starCountRef.on('value', function(snapshot) {
       var returningData = snapshot.val().val;
-      console.log(returningData);
-      codeCode.html(returningData);
+      sResult = returningData;
+      if(returningData.indexOf('http')!=-1){
+        sResult = '<a href="'+returningData+'">'+returningData+'</a>';
+      }
+      codeCode.html(sResult);
     });
   }
 
