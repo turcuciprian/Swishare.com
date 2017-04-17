@@ -1,0 +1,20 @@
+code {
+    margin: 20px;
+    display: inline-block;
+}
+input[type="text"]{
+  background:#a6a6a6;
+}
+#QRCode{
+  margin:60px 0;
+  display:block;
+}
+#QRCode img{
+  display:inline-block !important;
+}
+#codecode{
+  margin:10px;
+  border:2px solid #888888;
+  padding:10px;
+  background:#f1f1f1;
+}
