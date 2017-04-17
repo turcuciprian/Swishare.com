@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
         starCountRef.on('value', function(snapshot) {
             var returningData = snapshot.val().val;
             sResult = returningData;
-            if ((returningData.indexOf('http') != -1) && (returningData.indexOf('://') != -1)) {
+            if ((returningData.indexOf('http') == 0) && (returningData.indexOf('://') >0)) {
                 window.open(
                     returningData,
                     '_blank' // <- This is what makes it open in a new window.
