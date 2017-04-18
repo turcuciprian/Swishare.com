@@ -12,10 +12,6 @@ jQuery(document).ready(function() {
             var returningData = snapshot.val().val;
             sResult = returningData;
             if ((returningData.indexOf('http') == 0) && (returningData.indexOf('://') >0)) {
-                window.open(
-                    returningData,
-                    '_blank' // <- This is what makes it open in a new window.
-                );
                 sResult = '<a href="' + returningData + '" target="_blank">' + returningData + '</a>';
             }
             codeCode.html(sResult);
